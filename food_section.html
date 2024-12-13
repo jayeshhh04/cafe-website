@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Section Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .food-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .food-item {
+            flex-basis: calc(33.333% - 20px);
+            flex-grow: 1;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+
+        .food-img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .food-description {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .food-description h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .food-description p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .food-description .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #ff6347; /* Tomato color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .food-description .cta-button:hover {
+            background-color: #e5533d;
+        }
+
+        @media (max-width: 768px) {
+            .food-item {
+                flex-basis: calc(50% - 20px); /* 2-column layout for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .food-item {
+                flex-basis: 100%; /* 1-column layout for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="food-section">
+        <!-- Food Item 1 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/sFm1Ysy/food1.jpg" alt="food1" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 1</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 2 -->
+        <div class="food-item"> 
+            <img src="https://i.ibb.co/3rY8RHG/food2.jpg" alt="food2" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 2</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 3 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/dckZbr0/food13.jpg" alt="food13" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 4 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/rGfKg3H/food3.jpg" alt="food3" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 5 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/7JmvrWT/food4.jpg" alt="food4" border="0" class="food-img>
+                <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 6 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/QNML1Rx/food5.jpg" alt="food5" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 7 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/ZmpkXVV/food6.jpg" alt="food6" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 8 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/tbsMkqS/food7.jpg" alt="food7" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 9 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/yRMCX8v/food8.jpg" alt="food8" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 10 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/gZWSdXb/food9.jpg" alt="food9" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 11 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/9g2W8cd/food10.jpg" alt="food10" border="0" class="food-img>
+            <div class="food-description">
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Food Item 12 -->
+        <div class="food-item">
+            <img src="https://i.ibb.co/KycQW21/food11.jpg" alt="food11" border="0" class="food-img>
+                <h3>Delicious Dish 3</h3>
+                <p>A brief description of this dish.</p>
+                <a href="#" class="cta-button">Order Now</a>
+            </div>
+
+    </div>
+    </section>
+
+</body>
+</html>

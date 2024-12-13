@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUMNAN Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GUMNAN CAFE</h1>
+            <nav>
+                <ul>
+                    <li><a href="drinks_card.html">DRINKS</a></li>
+                    <li><a href="food_section.html">FOOD</a></li>
+                    <li><a href="our_cafe.html">OUR CAFE</a></li>
+                </ul>
+            </nav>
+            <div class="basket">
+                <p>$<span id="cart-total">0.00</span></p>
+                <img src="https://i.ibb.co/m6GSWrf/shopping-cart.png" alt="shopping-cart" border="0" onclick="toggleCart()">
+            </div>
+
+        </div>
+        <div class="space_between">
+            <!-- space between nav and header  -->
+            <h2>WE MAKE WHAT YOU LOVE :)</h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="drink-options">
+                <div class="drink-card">
+                    <div class="card-inner">
+                        <div class="card-front latte-front">
+                            <img src="https://i.ibb.co/whgM7SQ/latte.jpg" alt="latte" border="0">
+                            <h2>Latte</h2>
+                            <p>90 Cal</p>
+                        </div>
+                        <div class="card-back latte-back">
+                            <h3>SIZE</h3>
+                            <button type="button" onclick="addToCart('Latte', 'TALL')">TALL</button>
+                            <button type="button" onclick="addToCart('Latte', 'GRANDE')">GRANDE</button>
+                            <button type="button" onclick="addToCart('Latte', 'VENTI')">VENTI</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <div class="card-inner">
+                        <div class="card-front caramel_frappuccino_front">
+                            <img src="https://i.ibb.co/sqFgP6c/caramel-frappuccino.jpg" alt="caramel-frappuccino" border="0">
+                            <h2>Caramel Frappuccino</h2>
+                            <p>280 Cal</p>
+                        </div>
+                        <div class="card-back caramel-back">
+                            <h3>SIZE</h3>
+                            <button type="button" onclick="addToCart('Caramel Frappuccino', 'TALL')">TALL</button>
+                            <button type="button" onclick="addToCart('Caramel Frappuccino', 'GRANDE')">GRANDE</button>
+                            <button type="button" onclick="addToCart('Caramel Frappuccino', 'VENTI')">VENTI</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <div class="card-inner">
+                        <div class="card-front chocolate_milkshake_front">
+                            <img src="https://i.ibb.co/Kb34kPN/chocolate-milkshake.jpg" alt="chocolate-milkshake" border="0">
+                            <h2>Chocolate Milkshake</h2>
+                            <p>280 Cal</p>
+                        </div>
+                        <div class="card-back chocolate-back">
+                            <h3>SIZE</h3>
+                            <button type="button" onclick="addToCart('Chocolate Milkshake', 'TALL')">TALL</button>
+                            <button type="button" onclick="addToCart('Chocolate Milkshake', 'GRANDE')">GRANDE</button>
+                            <button type="button" onclick="addToCart('Chocolate Milkshake', 'VENTI')">VENTI</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="drink-card">
+                    <div class="card-inner">
+                        <div class="card-front strawberry_lemon_refresher_front">
+                            <img src="https://i.ibb.co/DV6RLsT/strawberry-lemon-refresher.jpg" alt="strawberry-lemon-refresher" border="0">
+                            <h2>Strawberry Lemon Refresher</h2>
+                            <p>280 Cal</p>
+                        </div>
+                        <div class="card-back strawberry-back">
+                            <h3>SIZE</h3>
+                            <button type="button" onclick="addToCart('Strawberry Lemon Refresher', 'TALL')">TALL</button>
+                            <button type="button" onclick="addToCart('Strawberry Lemon Refresher', 'GRANDE')">GRANDE</button>
+                            <button type="button" onclick="addToCart('Strawberry Lemon Refresher', 'VENTI')">VENTI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>YOUR CART</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="modal-cart-total">0.00</span></p>
+            <button id="buy-now-button" onclick="showPaymentOptions()">Buy Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
