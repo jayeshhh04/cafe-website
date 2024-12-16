@@ -25,6 +25,14 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// Define the image links for each drink
+const imageUrls = {
+    'Latte': 'https://i.ibb.co/whgM7SQ/latte.jpg',
+    'Caramel Frappuccino': 'https://i.ibb.co/sqFgP6c/caramel-frappuccino.jpg',
+    'Chocolate Milkshake': 'https://i.ibb.co/Kb34kPN/chocolate-milkshake.jpg',
+    'Strawberry Lemon Refresher': 'https://i.ibb.co/DV6RLsT/strawberry-lemon-refresher.jpg'
+};
+
 // Function to add item to cart based on drink and size
 function addToCart(drink, size) {
     const price = prices[drink][size]; // Get the price for the selected drink and size
@@ -77,9 +85,13 @@ function updateCartModal() {
         itemElement.classList.add('cart-item');
 
         const itemImage = document.createElement('img');
-        itemImage.src = `images/${item.drink.toLowerCase().replace(/\s+/g, '-')}.jpg`; // Corrected image path
+        itemImage.src = imageUrls[item.drink]; // Set the image source based on the drink
         itemImage.alt = item.drink;
         itemImage.classList.add('cart-item-image');
+
+        // Fix the size of the images
+        itemImage.style.width = '40px'; // Fixed width for images
+        itemImage.style.height = '50px'; // Fixed height for images
 
         const itemDetails = document.createElement('div');
         itemDetails.classList.add('cart-item-details');
@@ -174,7 +186,7 @@ updateCartModal();
 // Function to show payment options
 function showPaymentOptions() {
     const paymentOptions = document.createElement('div');
-    paymentOptions.innerHTML = `
+    paymentOptions.innerHTML = ` 
         <h3>Select Payment Method</h3>
         <label><input type="radio" name="payment-method" value="credit-card"> Credit Card</label><br>
         <label><input type="radio" name="payment-method" value="upi"> UPI</label><br>
